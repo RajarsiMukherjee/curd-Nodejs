@@ -1,0 +1,25 @@
+{
+  "name": "curd-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RajarsiMukherjee/curd-Nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RajarsiMukherjee/curd-Nodejs/issues"
+  },
+  "homepage": "https://github.com/RajarsiMukherjee/curd-Nodejs#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.1"
+  }
+}
