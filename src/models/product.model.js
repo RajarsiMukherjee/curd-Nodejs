@@ -7,5 +7,10 @@ const productSchema = new mongoose.Schema(
         operation: { type: String, required: true }
 
 
-    })
+    },
+    {
+        versionKey: false,
+        timestamps: true,
+    }
+);
 module.exports = mongoose.model("product", productSchema);
