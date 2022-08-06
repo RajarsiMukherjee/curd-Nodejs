@@ -24,13 +24,27 @@ router.get("", async function (req, res) {
 
     }
     catch (err) {
-        return res.sendStatus(500).send(err.message);
+        return res.status(500).send(err.message);
     }
 })
 
 //update
 
 router.patch("/:id", async function (req, res) {
+    try {
+        const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
+            new: true,
+        }).lean().exec();
+        //console.log(product);
+        return res.status(201).send(product);
+    } catch (err) {
+        return res.send.status(500).send(err.message);
+    }
+});
+
+//put
+
+router.put("/:id", async function (req, res) {
     try {
         const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
             new: true,
